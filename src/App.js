@@ -4,28 +4,33 @@ import ProductInventory from "./pages/Productinventory";
 import AdminOrdersPage from "./pages/AdminOrdersPage";
 import CategoryOrdersPage from "./pages/CreateOrderPage";
 import Dashboard from "./pages/AdminDashboard";
+import AdminLogin from "./pages/AdminLogin";
+import ForgotPassword from "./pages/AdminForgotPassword";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* 1. If user lands on http://localhost:3001/, send them to /admin */}
-        <Route path="/" element={<Navigate to="/admin" />} />
+        {/* Redirect root to login */}
+        <Route path="/" element={<Navigate to="/login" replace />} />
 
-        {/* 2. Parent Route */}
+        {/* Login page */}
+        <Route path="/login" element={<AdminLogin />} />
+        <Route path="/forgotpassword" element={<ForgotPassword />} />
+
+        {/* Admin section with layout */}
         <Route path="/admin" element={<AdminLayout />}>
-          
-          {/* 3. If user hits /admin, redirect to /admin/products */}
+          {/* Redirect /admin to /admin/products */}
           <Route index element={<Navigate to="products" replace />} />
-          
-          {/* 4. Child paths (no leading slashes needed) */}
-          <Route path="dashboard" element={<Dashboard/>} />
+
+          {/* Admin child pages */}
+          <Route path="dashboard" element={<Dashboard />} />
           <Route path="products" element={<ProductInventory />} />
-          <Route path="orders" element={<AdminOrdersPage/>} />
-          <Route path="sales" element={<CategoryOrdersPage/>} />
+          <Route path="orders" element={<AdminOrdersPage />} />
+          <Route path="sales" element={<CategoryOrdersPage />} />
         </Route>
 
-        {/* Optional: 404 Page */}
+        {/* Catch-all 404 page */}
         <Route path="*" element={<div>404 - Page Not Found</div>} />
       </Routes>
     </BrowserRouter>
