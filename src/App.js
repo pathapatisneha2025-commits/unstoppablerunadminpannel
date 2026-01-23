@@ -6,6 +6,10 @@ import CategoryOrdersPage from "./pages/CreateOrderPage";
 import Dashboard from "./pages/AdminDashboard";
 import AdminLogin from "./pages/AdminLogin";
 import ForgotPassword from "./pages/AdminForgotPassword";
+import AdminBanners from "./pages/BannerImages";
+import AdminActivities from "./pages/AdminActivities";
+import AdminServiceFeatures from "./pages/AdminServicespages";
+import AdminFeed from "./pages/AdminFeed";
 
 export default function App() {
   return (
@@ -28,6 +32,12 @@ export default function App() {
           <Route path="products" element={<ProductInventory />} />
           <Route path="orders" element={<AdminOrdersPage />} />
           <Route path="sales" element={<CategoryOrdersPage />} />
+          <Route path="banner" element={<AdminBanners/>} />
+      <Route path="activites" element={<AdminActivities/>} />
+      <Route path="services" element={<AdminServiceFeatures/>} />
+
+      <Route path="feed" element={<AdminFeed/>} />
+
         </Route>
 
         {/* Catch-all 404 page */}

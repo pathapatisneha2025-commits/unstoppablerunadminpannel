@@ -17,6 +17,13 @@ export default function AdminLayout() {
     { id: "dashboard", label: "Dashboard", icon: <LuLayoutDashboard />, path: "/admin/dashboard" },
     { id: "products", label: "Products", icon: <LuPackage />, path: "/admin/products" },
     { id: "orders", label: "Orders", icon: <LuShoppingBag />, path: "/admin/orders" },
+    { id: "bannenrs", label:"banner", icon: <LuShoppingBag />, path: "/admin/banner" },
+    { id: "activities", label:"actvities", icon: <LuShoppingBag />, path: "/admin/activites" },
+    // { id: "products", label:"products", icon: <LuShoppingBag />, path: "/admin/products" },
+
+    { id: "services", label:"services", icon: <LuShoppingBag />, path: "/admin/services" },
+    { id: "userfeeds", label:"feeds", icon: <LuShoppingBag />, path: "/admin/feed" },
+
     { id: "logout", label: "Logout", icon: <LuLogOut />, action: handleLogout },
     // { id: "sales", label: "CategorySales", icon: <LuChartBar />, path: "/admin/sales" },
   ];
