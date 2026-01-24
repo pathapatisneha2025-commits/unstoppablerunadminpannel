@@ -10,6 +10,7 @@ import AdminBanners from "./pages/BannerImages";
 import AdminActivities from "./pages/AdminActivities";
 import AdminServiceFeatures from "./pages/AdminServicespages";
 import AdminFeed from "./pages/AdminFeed";
+import AdminFeaturedCollections from "./pages/FeaturedCollection";
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="banner" element={<AdminBanners/>} />
       <Route path="activites" element={<AdminActivities/>} />
       <Route path="services" element={<AdminServiceFeatures/>} />
+    <Route path="featurecollection" element={<AdminFeaturedCollections/>} />
 
       <Route path="feed" element={<AdminFeed/>} />
 

@@ -19,7 +19,7 @@ export default function AdminLayout() {
     { id: "orders", label: "Orders", icon: <LuShoppingBag />, path: "/admin/orders" },
     { id: "bannenrs", label:"banner", icon: <LuShoppingBag />, path: "/admin/banner" },
     { id: "activities", label:"actvities", icon: <LuShoppingBag />, path: "/admin/activites" },
-    // { id: "products", label:"products", icon: <LuShoppingBag />, path: "/admin/products" },
+    { id: "featuredcollections", label:"featured", icon: <LuShoppingBag />, path: "/admin/featurecollection" },
 
     { id: "services", label:"services", icon: <LuShoppingBag />, path: "/admin/services" },
     { id: "userfeeds", label:"feeds", icon: <LuShoppingBag />, path: "/admin/feed" },
